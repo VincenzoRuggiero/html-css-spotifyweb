@@ -4,91 +4,88 @@
   box-sizing: border-box;
 }
 
-.hidden {
-  display: none;
-}
-
+/* Utilities */
 .wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
+/* Header */
 header {
-  width: 50px;
-  height: calc(100vh - 50px);
-  background-color: aqua;
+  width: 200px;
+  height: calc(100vh - 100px);
+  background-color: #a786df;
 }
 
-header .item {
-  width: 100%;
-  height: 30px;
-  background-color: #fdc15f;
-  border-bottom: 1px solid black;
-}
-
-header .logo {
-  background-color: #fd5fa8;
-  height: 50px;
-}
-
-.menu-container {
-  height: calc(100vh - 50px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
+/* Main Content */
 main {
-  flex-grow: 1;
+  width: calc(100% - 200px);
+  height: calc(100vh - 100px);
   background-color: yellowgreen;
-}
-
-.top-bar,
-.navigation {
-  height: 50px;
-}
-
-.top-bar {
-  background-color: brown;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.button {
-  height: 100%;
-  width: 150px;
-  background-color: coral;
-}
-
-main .navigation {
-  background-color: cornflowerblue;
-}
-
-main .content {
-  padding: 1rem;
-  background-color: #f77f00;
   overflow-y: scroll;
 }
 
-main .row {
+.button,
+.navigation {
+  width: 100%;
+  height: 50px;
+  background-color: aqua;
+  padding: 0.5rem;
+}
+
+.row {
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
-  background-color: #778da9;
+  margin-bottom: 2rem;
 }
 
 .album {
-  width: 160px;
-  height: 160px;
   background-color: gold;
   border: 3px solid red;
   margin-bottom: 1rem;
+  object-fit: cover;
+  overflow: hidden;
+  margin-right: 0.5rem;
 }
 
+.box-art {
+  width: 128px;
+  height: 128px;
+}
+
+.box-art img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Footer */
 footer {
   width: 100%;
-  height: 10px;
+  height: 100px;
   background-color: blueviolet;
 }
 
+@media screen and (max-width: 575px) {
+  main {
+    width: calc(100% - 50px);
+  }
+
+  header {
+    width: 50px;
+  }
+
+  .album {
+    width: 180px;
+  }
+
+  .box-art {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* 
 @media screen and (min-width: 450px) {
   header {
     width: 140px;
@@ -105,22 +102,14 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  .hidden {
-    display: block;
-  }
-
   .content {
     max-width: 450px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .content {
-    max-width: 800px;
-  }
-
   .album {
     width: 128px;
     height: 128px;
   }
-}
+} */ ;
