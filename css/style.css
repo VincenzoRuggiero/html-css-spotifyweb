@@ -15,6 +15,27 @@ header {
   width: 200px;
   height: calc(100vh - 100px);
   background-color: #a786df;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-menu {
+  width: 100%;
+  background-color: #2a9d8f;
+}
+
+.logo,
+.navigation,
+.playlists {
+  height: 100px;
+  width: 100%;
+  background-color: #f4a261;
+  border-bottom: 1px solid black;
+}
+
+.bottom-menu {
+  background-color: #f4a261;
 }
 
 /* Main Content */
@@ -26,7 +47,7 @@ main {
 }
 
 .button,
-.navigation {
+.categories {
   width: 100%;
   height: 50px;
   background-color: aqua;
@@ -84,32 +105,3 @@ footer {
     height: 180px;
   }
 }
-
-/* 
-@media screen and (min-width: 450px) {
-  header {
-    width: 140px;
-  }
-
-  .album {
-    width: 100px;
-    height: 100px;
-  }
-
-  .content {
-    max-width: 260px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .content {
-    max-width: 450px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .album {
-    width: 128px;
-    height: 128px;
-  }
-} */ ;
