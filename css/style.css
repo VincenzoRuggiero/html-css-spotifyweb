@@ -197,7 +197,7 @@ footer {
 }
 
 .player-container {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   padding: 1rem;
   display: flex;
@@ -208,7 +208,7 @@ footer {
 
 .now-playing,
 .volume {
-  width: 250px;
+  max-width: 250px;
 }
 
 .now-playing,
@@ -244,12 +244,6 @@ footer {
   align-items: center;
 }
 
-.controls div:last-child {
-  margin-top: 0.5rem;
-  display: flex;
-  align-items: center;
-}
-
 .controls i {
   font-size: 1.2rem;
   margin-inline: 0.5rem;
@@ -270,17 +264,18 @@ footer {
 .volume .volume-bar {
   display: inline-block;
   background-color: grey;
-  border-radius: 3px;
+  border-radius: 5px;
   height: 7px;
 }
 .controls .progress-bar {
-  width: 250px;
+  min-width: 300px;
 }
 
-.progress-bar .fill-bar {
+.fill-bar {
   width: 20%;
   height: 7px;
   background-color: white;
+  border-radius: 5px;
 }
 
 .volume i {
