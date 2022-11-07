@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+body {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
 /* Utilities */
 .wrapper {
   display: flex;
@@ -14,7 +23,7 @@
 header {
   width: 200px;
   height: calc(100vh - 100px);
-  background-color: #a786df;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,62 +31,113 @@ header {
 
 .top-menu {
   width: 100%;
-  background-color: #2a9d8f;
 }
 
 .logo,
 .navigation,
 .playlists {
-  height: 100px;
+  padding: 1rem;
   width: 100%;
-  background-color: #f4a261;
-  border-bottom: 1px solid black;
+}
+
+header .logo {
+  width: 80%;
+}
+
+header .navigation li {
+  color: #707070;
+}
+header .navigation li:hover {
+  color: white;
+  border-left: 3px solid yellowgreen;
+}
+
+header .navigation li img {
+  width: 20px;
+  margin-right: 0.5rem;
+}
+
+/* Playlists */
+header .playlists {
+  font-size: 0.8rem;
+  color: grey;
+}
+header .playlists h5 {
+  font-size: 1.1rem;
+  color: white;
+}
+
+header .playlists li {
+  line-height: 2rem;
+}
+
+header .playlists li:first-child {
+  font-size: 1rem;
+}
+
+header .playlists i {
+  font-size: 1.7rem;
+  color: white;
+  margin-right: 0.3rem;
 }
 
 .bottom-menu {
-  background-color: #f4a261;
+  padding: 1rem;
+}
+
+.bottom-menu .download {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid white;
+  font-size: 0.7rem;
+}
+
+.bottom-menu i {
+  margin-right: 0.5rem;
+}
+
+.bottom-menu .user p {
+  font-weight: bold;
+  padding-top: 0.5rem;
 }
 
 /* Main Content */
 main {
   width: calc(100% - 200px);
   height: calc(100vh - 100px);
-  background-color: yellowgreen;
+  background-color: #141922;
   overflow-y: scroll;
 }
 
 .button,
 .categories {
-  width: 100%;
   height: 50px;
   background-color: aqua;
   padding: 0.5rem;
 }
 
-.row {
+section.albums {
   padding: 1rem;
+}
+
+section.albums h2 {
+  margin-bottom: 1rem;
+}
+
+.row {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
 .album {
-  background-color: gold;
-  border: 3px solid red;
+  width: calc((100% / 2) - 1rem);
   margin-bottom: 1rem;
-  object-fit: cover;
-  overflow: hidden;
-  margin-right: 0.5rem;
-}
-
-.box-art {
-  width: 128px;
-  height: 128px;
+  margin-right: 1rem;
+  text-align: center;
 }
 
 .box-art img {
   width: 100%;
-  height: 100%;
 }
 
 /* Footer */
@@ -98,7 +158,6 @@ footer {
 .controls,
 .volume {
   width: 250px;
-  height: auto;
   background-color: cornflowerblue;
 }
 
@@ -111,12 +170,22 @@ footer {
     width: 50px;
   }
 
-  .album {
-    width: 180px;
+  header .logo {
   }
 
-  .box-art {
-    width: 180px;
-    height: 180px;
+  header .playlists {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .album {
+    width: calc((100% / 4) - 2rem);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .album {
+    width: calc((100% / 6) - 2rem);
   }
 }
