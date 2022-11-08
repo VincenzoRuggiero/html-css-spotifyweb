@@ -149,12 +149,6 @@ button {
   padding: 10px 20px;
 }
 
-button:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  transition: all 0.5s ease-in-out;
-}
-
 .categories {
   display: flex;
   flex-wrap: wrap;
@@ -245,7 +239,7 @@ footer {
 
 .now-playing,
 .volume {
-  max-width: 250px;
+  /* max-width: 250px; */
 }
 
 .now-playing,
@@ -282,19 +276,19 @@ footer {
 }
 
 .controls i {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-inline: 0.5rem;
 }
 
 .controls i:nth-child(3) {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .controls span {
-  display: inline-block;
   font-size: 0.7rem;
   font-weight: bold;
   margin-inline: 0.6rem;
+  display: none;
 }
 
 .controls .progress-bar,
@@ -304,8 +298,12 @@ footer {
   border-radius: 5px;
   height: 7px;
 }
-.controls .progress-bar {
-  min-width: 300px;
+.progress-bar {
+  min-width: 200px;
+}
+
+.volume-bar {
+  width: 58px;
 }
 
 .fill-bar {
@@ -356,10 +354,26 @@ footer {
   .album {
     width: calc((100% / 4) - 2rem);
   }
+
+  .controls i {
+    font-size: 1.2rem;
+  }
+
+  .controls i:nth-child(3) {
+    font-size: 1.5rem;
+  }
+
+  .controls span {
+    display: inline;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .album {
     width: calc((100% / 6) - 2rem);
+  }
+
+  .progress-bar {
+    min-width: 300px;
   }
 }
