@@ -218,10 +218,30 @@ section.albums span {
   color: grey;
 }
 
+.box-art {
+  position: relative;
+}
+
+.box-art:hover {
+  background-color: #090b13;
+  opacity: 0.8;
+}
+
+.box-art:hover:before {
+  position: absolute;
+  display: inline-block;
+  content: "\f144";
+  font-family: "FontAwesome";
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
 .box-art img {
   width: 100%;
 }
-
 .rounded {
   border-radius: 50%;
 }
