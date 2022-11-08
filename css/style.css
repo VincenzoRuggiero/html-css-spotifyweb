@@ -13,6 +13,14 @@ ul {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
 /* Utilities */
 .wrapper {
   display: flex;
@@ -34,7 +42,6 @@ header {
 }
 
 .logo,
-.navigation,
 .playlists {
   padding: 1rem;
   width: 100%;
@@ -46,10 +53,18 @@ header .logo {
 
 header .navigation li {
   color: #707070;
+  position: relative;
+  padding-left: 1rem;
+}
+
+header .navigation li:first-child,
+header .playlists li:first-child {
+  color: white;
 }
 header .navigation li:hover {
   color: white;
-  border-left: 3px solid yellowgreen;
+  border-left: 4px solid #b2ff31;
+  padding-left: 10px;
 }
 
 header .navigation li img {
@@ -73,6 +88,10 @@ header .playlists li {
 
 header .playlists li:first-child {
   font-size: 1rem;
+}
+
+header .playlists li:hover {
+  color: white;
 }
 
 header .playlists i {
@@ -130,6 +149,12 @@ button {
   padding: 10px 20px;
 }
 
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
 .categories {
   display: flex;
   flex-wrap: wrap;
@@ -143,6 +168,18 @@ button {
   text-transform: uppercase;
   margin: 0 1.5rem;
   font-size: 0.8rem;
+  position: relative;
+  color: white;
+}
+
+.categories li:hover:before {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  height: 1px;
+  width: 50%;
+  border-bottom: 2px solid #b2ff31;
 }
 
 /* Sezione Dischi */
