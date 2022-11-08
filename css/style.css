@@ -15,6 +15,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 a:visited {
@@ -55,6 +56,7 @@ header .navigation li {
   color: #707070;
   position: relative;
   padding-left: 1rem;
+  font-size: 0.8rem;
 }
 
 header .navigation li:first-child,
@@ -78,16 +80,25 @@ header .playlists {
   color: grey;
 }
 header .playlists h5 {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: white;
+  text-transform: uppercase;
+}
+
+header .playlists div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
 }
 
 header .playlists li {
-  line-height: 2rem;
+  line-height: 1.5rem;
 }
 
 header .playlists li:first-child {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  color: grey;
 }
 
 header .playlists li:hover {
@@ -95,9 +106,9 @@ header .playlists li:hover {
 }
 
 header .playlists i {
-  font-size: 1.7rem;
-  color: white;
-  margin-right: 0.3rem;
+  font-size: 2rem;
+  color: grey;
+  margin-right: 0.7rem;
 }
 
 .bottom-menu {
@@ -112,6 +123,10 @@ header .playlists i {
 
 .bottom-menu .download {
   color: grey;
+}
+
+.bottom-menu .user {
+  margin-top: 0.6rem;
 }
 
 .bottom-menu span {
@@ -169,7 +184,6 @@ button:hover {
   margin: 0 1.5rem;
   font-size: 0.8rem;
   position: relative;
-  color: white;
 }
 
 .categories li:hover:before {
