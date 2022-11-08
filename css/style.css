@@ -245,14 +245,13 @@ footer {
 
 .now-playing,
 .volume {
-  /* max-width: 250px; */
-}
-
-.now-playing,
-.volume {
   height: 100%;
   display: flex;
   align-items: center;
+}
+
+.now-playing i:hover {
+  font-family: FontAwesome;
 }
 
 .volume {
