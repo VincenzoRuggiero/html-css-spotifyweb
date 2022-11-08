@@ -401,4 +401,8 @@ footer {
   .progress-bar {
     min-width: 300px;
   }
+
+  .box-art:hover:before {
+    font-size: 4rem;
+  }
 }
