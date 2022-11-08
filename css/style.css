@@ -89,6 +89,7 @@ header .playlists div {
   display: flex;
   align-items: center;
   margin-bottom: 0.7rem;
+  color: grey;
 }
 
 header .playlists li {
@@ -98,17 +99,19 @@ header .playlists li {
 header .playlists li:first-child {
   font-size: 0.8rem;
   line-height: 1rem;
-  color: grey;
-}
-
-header .playlists li:hover {
-  color: white;
 }
 
 header .playlists i {
   font-size: 2rem;
-  color: grey;
   margin-right: 0.7rem;
+}
+
+.playlists div:hover,
+.playlists li:hover,
+.download:hover,
+.playlists i:hover,
+.bottom-menu .download:hover {
+  color: white;
 }
 
 .bottom-menu {
@@ -238,7 +241,7 @@ section.albums span {
 
 .box-art:hover {
   background-color: #090b13;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .box-art:hover:before {
@@ -279,7 +282,6 @@ footer {
 
 .now-playing,
 .volume {
-  height: 100%;
   display: flex;
   align-items: center;
 }
